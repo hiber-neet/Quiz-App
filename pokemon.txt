@@ -1,0 +1,42 @@
+use pokemon
+select * from question
+CREATE TABLE Question (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    question_title NVARCHAR(MAX) NOT NULL,
+    option1 NVARCHAR(MAX) NOT NULL,
+    option2 NVARCHAR(MAX) NOT NULL,
+    option3 NVARCHAR(MAX) NOT NULL,
+    option4 NVARCHAR(MAX) NOT NULL,
+    right_answer NVARCHAR(MAX) NOT NULL,
+    difficulty_level NVARCHAR(MAX) NOT NULL,
+    category NVARCHAR(MAX) NOT NULL
+);
+
+INSERT INTO Question (question_title, option1, option2, option3, option4, right_answer, difficulty_level, category)
+VALUES
+    (N'What is a class in Java?', N'A function', N'An object', N'A data structure', N'A loop', N'An object', N'Easy', N'java'),
+    (N'What does OOP stand for?', N'Object-Oriented Programming', N'Object Ordering Process', N'Operating Overloaded Pointers', N'Order of Operations', N'Object-Oriented Programming', N'Easy', N'java'),
+    (N'What is a list in Python?', N'A type of loop', N'A built-in function', N'A data structure', N'An object', N'A data structure', N'Easy', N'python'),
+    (N'Which data structure uses First-In-First-Out (FIFO) order?', N'Stack', N'Queue', N'Array', N'LinkedList', N'Queue', N'Medium', N'python'),
+    (N'What is a constructor?', N'A member of a class', N'A loop in Python', N'A data type', N'A special method', N'A special method', N'Medium', N'java'),
+    (N'Which sorting algorithm has the worst-case time complexity of O(n^2)?', N'Merge Sort', N'Quick Sort', N'Insertion Sort', N'Bubble Sort', N'Bubble Sort', N'Hard', N'python'),
+    (N'In Java, what is used to create an instance of a class?', N'Class', N'Method', N'Object', N'Constructor', N'Constructor', N'Easy', N'java'),
+    (N'Which keyword is used to define a variable that won’t be reassigned?', N'static', N'final', N'constant', N'immutable', N'final', N'Easy', N'java'),
+    (N'What is the output of 4 ^ 3 in Python?', N'7', N'64', N'81', N'12', N'64', N'Easy', N'python'),
+    (N'What does the term "polymorphism" refer to in programming?', N'Using multiple inheritance', N'Ability to take multiple forms', N'Manipulating data', N'Using multiple programming languages', N'Ability to take multiple forms', N'Medium', N'java'),
+    (N'What is the purpose of the "self" parameter in Python class methods?', N'It refers to the current instance of the class', N'It is used to call parent class methods', N'It is a keyword for loops', N'It is a data type', N'It refers to the current instance of the class', N'Medium', N'python'),
+    (N'Which of the following is not a primitive data type in Java?', N'int', N'boolean', N'char', N'string', N'string', N'Medium', N'java'),
+    (N'What is the time complexity of a binary search?', N'O(n)', N'O(log n)', N'O(n^2)', N'O(1)', N'O(log n)', N'Medium', N'python'),
+    (N'What keyword is used to inherit a class in Python?', N'extends', N'inherits', N'super', N'class', N'class', N'Easy', N'python'),
+    (N'Which type of loop is ideal for situations where the number of iterations is known?', N'for loop', N'while loop', N'do-while loop', N'until loop', N'for loop', N'Easy', N'java'),
+    (N'What is the purpose of "import" in Python?', N'To export data', N'To create a backup', N'To include external modules', N'To print output', N'To include external modules', N'Easy', N'python'),
+    (N'In Java, which access modifier provides the widest visibility?', N'public', N'private', N'protected', N'package-private', N'public', N'Easy', N'java'),
+    (N'What is a lambda function in Python?', N'A function that uses the "lambda" keyword', N'A function with multiple return values', N'A function with no parameters', N'An anonymous inline function', N'An anonymous inline function', N'Medium', N'python'),
+    (N'What is a linked list?', N'A type of array', N'A linear data structure', N'A collection of objects', N'A group of classes', N'A linear data structure', N'Medium', N'java'),
+    (N'Which operator is used to concatenate strings in Python?', N'&', N'+', N'*', N'++', N'+', N'Easy', N'python'),
+    (N'What does JVM stand for?', N'Java Virtual Machine', N'Just Virtual Memory', N'JavaScript Virtual Machine', N'Java Version Manager', N'Java Virtual Machine', N'Easy', N'java'),
+    (N'In Python, what is the main difference between a tuple and a list?', N'Tuples are mutable, lists are not', N'Lists are ordered, tuples are not', N'Tuples can store mixed data types, lists cannot', N'Lists have a fixed size, tuples do not', N'Tuples can store mixed data types, lists cannot', N'Medium', N'python'),
+    (N'What is the purpose of the "finally" block in a try-catch-finally statement?', N'To handle exceptions', N'To define a fallback value', N'To execute code regardless of exceptions', N'To terminate the program', N'To execute code regardless of exceptions', N'Medium', N'java'),
+    (N'What is a dictionary in Python?', N'A sorted collection of elements', N'A data structure used for searching', N'An ordered sequence of elements', N'A key-value store', N'A key-value store', N'Easy', N'python'),
+    (N'Which keyword is used to define a subclass in Java?', N'child', N'extends', N'inherits', N'subclass', N'extends', N'Easy', N'java'),
+    (N'What is the purpose of the "pass" statement in Python?', N'To stop the execution of a loop', N'To indicate an empty code block', N'To raise an exception', N'To terminate the program', N'To indicate an empty code block', N'Easy', N'python');

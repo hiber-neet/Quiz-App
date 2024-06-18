@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome To Quiz App</title>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <ul th:each="quiz : ${listQuiz}">
+        <li th:text="${quiz.title}"></li>
+    </ul>
+</body>
+</html>

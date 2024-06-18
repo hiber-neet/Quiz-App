@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+
+
+    <form th:action="@{/question/submitAnswer}" method="post" th:object="${questionWrapper}">
+
+        <div th:each="quiz, index : ${questionWrapper.answerList}">
+            <h4 th:text="${quiz.getQuestionTitle()}"></h4>
+            <br/>
+            <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
+
+                   th:value="${quiz.getOption1()}" />
+            <label th:text="${quiz.getOption1()}"></label>
+
+            <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
+
+                   th:value="${quiz.getOption2()}" />
+            <label th:text="${quiz.getOption2()}"></label>
+
+            <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
+
+                   th:value="${quiz.getOption3()}" />
+            <label th:text="${quiz.getOption3()}"></label>
+
+            <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
+
+                   th:value="${quiz.getOption4()}" />
+            <label th:text="${quiz.getOption4()}"></label>
+        </div>
+        <br/>
+            <input type="submit" name="submitBttn" value="Submit"/>
+    </form>
+
+</body>
+</html>

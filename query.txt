@@ -1,0 +1,131 @@
+
+use QuizApp
+select * from question
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What is the size of int in Java?', '8 bits', '16 bits', '32 bits', '64 bits', '32 bits', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which keyword is used to inherit a class in Java?', 'implement', 'extends', 'inherits', 'super', 'extends', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What is the return type of the hashCode() method in the Object class?', 'int', 'Object', 'long', 'void', 'int', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which method can be used to create a new thread?', 'start()', 'run()', 'init()', 'new()', 'start()', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What is the default value of a boolean variable in Java?', 'true', 'false', '0', 'null', 'false', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of these packages contains the exception StackOverflowError?', 'java.lang', 'java.util', 'java.io', 'java.net', 'java.lang', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What does the expression float a = 35 / 0 return?', 'Infinity', '0', 'NaN', 'Runtime Exception', 'Infinity', 'Hard');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of these classes are the direct subclasses of the Throwable class?', 'RuntimeException and Error', 'Exception and Error', 'Exception and RuntimeException', 'RuntimeException and IOException', 'Exception and Error', 'Hard');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which operator is used by default to handle multiple exceptions in a catch block in Java 7?', '&', '|', '&&', '||', '|', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('In Java, which is the following keyword is used to define an abstract class?', 'abstract', 'implements', 'extends', 'class', 'abstract', 'Easy');
+
+Insert into quiz(title) values('Java')
+insert into quiz_questions(quiz_id, questions_id)values(1, 1)
+insert into quiz_questions(quiz_id, questions_id)values(1, 2)
+insert into quiz_questions(quiz_id, questions_id)values(1, 3)
+insert into quiz_questions(quiz_id, questions_id)values(1, 4)
+insert into quiz_questions(quiz_id, questions_id)values(1, 5)
+insert into quiz_questions(quiz_id, questions_id)values(1, 6)
+insert into quiz_questions(quiz_id, questions_id)values(1, 7)
+insert into quiz_questions(quiz_id, questions_id)values(1, 8)
+insert into quiz_questions(quiz_id, questions_id)values(1, 9)
+insert into quiz_questions(quiz_id, questions_id)values(1, 10)
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following is the correct syntax to create a variable in C#?', 'int x = 10;', 'int x;', 'x = 10;', '10 = int x;', 'int x = 10;', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following is a value type in C#?', 'string', 'delegate', 'int', 'interface', 'int', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which keyword is used to define a namespace in C#?', 'package', 'namespace', 'module', 'assembly', 'namespace', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which method is used to start a thread in C#?', 'init()', 'start()', 'run()', 'begin()', 'start()', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following is the base class for all exceptions in C#?', 'System.Exception', 'System.SystemException', 'System.RuntimeException', 'System.ApplicationException', 'System.Exception', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following is not a C# access modifier?', 'public', 'protected', 'internal', 'global', 'global', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What is the default value of a bool variable in C#?', 'true', 'false', 'null', '0', 'false', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of these statements is correct about the C# code: int[] arr = new int[5];', 'Creates an array of 5 integers.', 'Creates an array of 4 integers.', 'Creates an array of 6 integers.', 'Creates an array of 0 integers.', 'Creates an array of 5 integers.', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following methods can be used to read a single character from the console in C#?', 'Console.ReadLine()', 'Console.Read()', 'Console.ReadKey()', 'Console.ReadChar()', 'Console.Read()', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which keyword is used to inherit a class in C#?', 'inherits', 'implements', 'extends', 'base', 'base', 'Easy');
+
+Insert into quiz(title) values('C#')
+insert into quiz_questions(quiz_id, questions_id)values(2, 11)
+insert into quiz_questions(quiz_id, questions_id)values(2, 12)
+insert into quiz_questions(quiz_id, questions_id)values(2, 13)
+insert into quiz_questions(quiz_id, questions_id)values(2, 14)
+insert into quiz_questions(quiz_id, questions_id)values(2, 15)
+insert into quiz_questions(quiz_id, questions_id)values(2, 16)
+insert into quiz_questions(quiz_id, questions_id)values(2, 17)
+insert into quiz_questions(quiz_id, questions_id)values(2, 18)
+insert into quiz_questions(quiz_id, questions_id)values(2, 19)
+insert into quiz_questions(quiz_id, questions_id)values(2, 20)
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following is correct about JavaScript?', 'It is a server-side scripting language', 'It is a client-side scripting language', 'It is a database management tool', 'It is a Java programming language', 'It is a client-side scripting language', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('How do you create a function in JavaScript?', 'function myFunction()', 'function:myFunction()', 'function = myFunction()', 'function => myFunction()', 'function myFunction()', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('How do you call a function named "myFunction"?', 'call myFunction()', 'call function myFunction()', 'myFunction()', 'Call.myFunction()', 'myFunction()', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following will write "Hello World" in an alert box?', 'alertBox("Hello World");', 'msg("Hello World");', 'alert("Hello World");', 'msgBox("Hello World");', 'alert("Hello World");', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following is used to declare a variable in JavaScript?', 'var', 'let', 'const', 'All of the above', 'All of the above', 'Easy');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What is the correct way to write a JavaScript array?', 'var colors = "red", "green", "blue"', 'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")', 'var colors = ["red", "green", "blue"]', 'var colors = (1:"red", 2:"green", 3:"blue")', 'var colors = ["red", "green", "blue"]', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('How do you find the minimum of x and y using JavaScript?', 'min(x,y);', 'Math.min(x,y)', 'Math.minimum(x,y)', 'minimum(x,y)', 'Math.min(x,y)', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('Which of the following is not a reserved word in JavaScript?', 'interface', 'throws', 'program', 'short', 'program', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What is the correct JavaScript syntax to write "Hello World"?', 'System.out.println("Hello World")', 'println ("Hello World")', 'document.write("Hello World")', 'response.write("Hello World")', 'document.write("Hello World")', 'Medium');
+
+INSERT INTO Question (question_Title, option1, option2, option3, option4, right_Answer, difficulty_level) VALUES
+('What is the output of the following JavaScript code? \nconsole.log(typeof null);', '"null"', '"undefined"', '"object"', '"number"', '"object"', 'Hard');
+
+Insert into quiz(title) values('Javascript')
+insert into quiz_questions(quiz_id, questions_id)values(3, 21)
+insert into quiz_questions(quiz_id, questions_id)values(3, 22)
+insert into quiz_questions(quiz_id, questions_id)values(3, 23)
+insert into quiz_questions(quiz_id, questions_id)values(3, 24)
+insert into quiz_questions(quiz_id, questions_id)values(3, 25)
+insert into quiz_questions(quiz_id, questions_id)values(3, 26)
+insert into quiz_questions(quiz_id, questions_id)values(3, 27)
+insert into quiz_questions(quiz_id, questions_id)values(3, 28)
+insert into quiz_questions(quiz_id, questions_id)values(3, 29)
+insert into quiz_questions(quiz_id, questions_id)values(3, 30)
+
+insert into role (name)values('User'),('Admin')
+insert into user_entity(user_name, password) values('a', 1234)
