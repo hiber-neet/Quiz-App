@@ -15,7 +15,7 @@ public class UserEntity {
     private String userName;
     private String password;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "userId", referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name = "roleId", referencedColumnName = "id"))
     List<Role> roles = new ArrayList<>();

@@ -23,7 +23,6 @@ public class CustomUserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println("Vao custom login service");
         UserEntity userEntity = userRepository.findByUserName(username).orElseThrow(() -> new UsernameNotFoundException("UserName Not Found!!!"));
         return new User(userEntity.getUserName(), userEntity.getPassword(), mapRoleToGrantedAuthority(userEntity.getRoles()));
     }
