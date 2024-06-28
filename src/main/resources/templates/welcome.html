@@ -6,8 +6,17 @@
 </head>
 <body>
     <h1>Quiz</h1>
+    <div th:unless="${JWT_TOKEN != null}">
+        <a href="auth/login"> Login to save score </a>
+    </div>
+    <div th:if="${JWT_TOKEN != null}">
+        <a href="question/view/answers"> View Your Point </a>
+    </div>
     <ul th:each="quiz : ${listQuiz}">
-        <li th:text="${quiz.title}"></li>
+        <li>
+            <a th:href="@{'/question/' + ${quiz.title}}" th:text="${quiz.title}"> </a>
+        </li>
     </ul>
+
 </body>
 </html>

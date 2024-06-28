@@ -10,6 +10,7 @@ import org.apache.catalina.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.CustomAutowireConfigurer;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -33,22 +34,31 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
         String token = extractTokenFromCookie(request);
         System.out.println("token from request: " + token);
-        System.out.println("internal filter chain");
+        System.out.println("internal before filter chain");
         if(StringUtils.hasText(token) && jwtGenerator.validateToken(token)){
             System.out.println("ok, validate thanh cong token");
             String userName = null;
             try {
                 userName = jwtGenerator.getUserNameFromJwt(token);
-                System.out.println("User name laccj:" + userName);
+                System.out.println("User name from cookie token:" + userName);
             } catch (NoSuchAlgorithmException e) {
                 System.out.println(e.getMessage());
                 throw new RuntimeException(e);
             }
             UserDetails userDetails = customUserDetailService.loadUserByUsername(userName);
-            System.out.println(userDetails.getAuthorities()+ "trong getAuthorities cua? userDetails co j");
-            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, userDetails.getAuthorities());
+            System.out.println(userDetails.getAuthorities() + " :trong getAuthorities cua? userDetails co j");
+            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
+            //tham so dau vao la 2 thi authorities la rong~
             authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (authentication != null) {
+                System.out.println("Context ở filter before");
+                System.out.println("Principal: " + authentication.getPrincipal());
+                System.out.println("Authorities: " + authentication.getAuthorities());
+                System.out.println("Details: " + authentication.getDetails());
+            }
+
         }
         filterChain.doFilter(request, response);
     }

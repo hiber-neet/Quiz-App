@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View ALl Point</title>
+</head>
+<body>
+    <h1>All Your Point</h1>
+    <div th:each="point, index : ${answerList}">
+        <h3 th:text="${index.index + 1 + 'time(s): ' + point.getPoint() + 'point(s)'}"></h3>
+        <h3 ></h3>
+    </div>
+</body>
+</html>

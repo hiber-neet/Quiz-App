@@ -12,7 +12,8 @@ public class Answer {
     private String option3;
     private String option4;
     private String answerOfUser;
-    public Answer(String questionTitle, String option1, String option2, String option3, String option4) {
+    public Answer(Integer id, String questionTitle, String option1, String option2, String option3, String option4) {
+        this.id = id;
         this.questionTitle = questionTitle;
         this.option1 = option1;
         this.option2 = option2;

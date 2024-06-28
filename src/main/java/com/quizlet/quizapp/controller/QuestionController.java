@@ -1,10 +1,12 @@
 package com.quizlet.quizapp.controller;
 
-import com.quizlet.quizapp.model.Question;
-import com.quizlet.quizapp.model.Answer;
-import com.quizlet.quizapp.model.QuestionWrapper;
+import com.quizlet.quizapp.model.*;
+import com.quizlet.quizapp.repository.UserPointRepository;
+import com.quizlet.quizapp.repository.UserRepository;
 import com.quizlet.quizapp.service.QuestionService;
 import com.quizlet.quizapp.service.QuizService;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpRequest;
@@ -13,16 +15,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("question")
 public class QuestionController {
     @Autowired
-    QuestionService questionService;
-    @Autowired
-    QuizService quizService;
-
+    private QuestionService questionService;
     @GetMapping("/{title}")
     public String getQuestionsByTitle(@PathVariable String title, Model model) {
         QuestionWrapper questionWrapper = questionService.getQuestionByTitle(title);
@@ -31,14 +32,14 @@ public class QuestionController {
     }
 
     @PostMapping("/submitAnswer")
-    public String getThePointAfterAnswer(@ModelAttribute("questionWrapper") QuestionWrapper questionWrapper){
-        List<Answer> answerList = questionWrapper.getAnswerList();
-        for (int i = 0; i < answerList.size(); i++){
-            System.out.println(answerList.get(i).getAnswerOfUser());
-        }
-        return "score";
+    public String getThePointAfterAnswer(@ModelAttribute("questionWrapper") QuestionWrapper questionWrapper, Model model, HttpServletRequest request) throws NoSuchAlgorithmException {
+        return questionService.getPointAfterAnswerQuestions(questionWrapper, model, request);
     }
-
+    @GetMapping("/view/answers")
+    public String viewAllAnswer(Model model, HttpServletRequest request) throws NoSuchAlgorithmException {
+        System.out.println("ko vao` wtf?????????");
+        return questionService.viewAllAnswer(model, request);
+    }
     @GetMapping("allQuestions")
     public List<Question> getAllQuestions(){
         return questionService.getAllQuestions();

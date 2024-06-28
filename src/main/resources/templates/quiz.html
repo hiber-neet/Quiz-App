@@ -15,21 +15,33 @@
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
                    th:value="${quiz.getOption1()}" />
+            <input type="hidden" th:name="|answerList[${index.index}].id|"
+
+                   th:value="${quiz.getId()}" />
             <label th:text="${quiz.getOption1()}"></label>
 
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
                    th:value="${quiz.getOption2()}" />
+            <input type="hidden" th:name="|answerList[${index.index}].id|"
+
+                   th:value="${quiz.getId()}" />
             <label th:text="${quiz.getOption2()}"></label>
 
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
                    th:value="${quiz.getOption3()}" />
+            <input type="hidden" th:name="|answerList[${index.index}].id|"
+
+                   th:value="${quiz.getId()}" />
             <label th:text="${quiz.getOption3()}"></label>
 
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
                    th:value="${quiz.getOption4()}" />
+            <input type="hidden" th:name="|answerList[${index.index}].id|"
+
+                   th:value="${quiz.getId()}" />
             <label th:text="${quiz.getOption4()}"></label>
         </div>
         <br/>
