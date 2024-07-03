@@ -1,0 +1,92 @@
+
+body{
+    margin: 0; /* Loại bỏ margin mặc định của trình duyệt */
+    padding: 0; /* Loại bỏ padding mặc định của trình duyệt */
+    height: 100vh; /* Đặt chiều cao của body là 100% chiều cao của viewport */
+    background: linear-gradient(to right, #25c481, #25b7c4);/* Gradient*/
+    background-size: cover; /* Đảm bảo background kích thước sao cho nó bao phủ toàn bộ body */
+    background-attachment: fixed; /* Giữ background ổn định khi cuộn trang */
+    overflow: hidden;
+}
+th{
+    width: 30%;
+}
+a{
+    text-decoration: none;
+}
+.tag {
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    color: #999;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px 0 23px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+
+    list-style: none;
+}
+
+.tag:hover {
+    background-color: antiquewhite;
+    color: white;
+}
+.headContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Đảm bảo phần tử căn giữa theo chiều cao của trang */
+    width: 100%;
+}
+thead{
+    background-color: rgba(255,255,255, 0.3);
+}
+table{
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Đảm bảo phần tử căn giữa theo chiều cao của trang */
+    width: 100%;
+}
+.loginFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Đảm bảo phần tử căn giữa theo chiều cao của trang */
+    width: 100%;
+}
+.LoginFrameInside{
+    width: 50%;
+    height: 30%;
+    border: 10px solid rgba(255,255,255,0.3);
+    background-color: white;
+    border-radius: 30px;
+}
+.Input{
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 25px;
+}
+.EnterInput{
+    padding: 10px;
+    border-radius: 10px;
+    width: 25%;
+    margin-top: 25px;
+    background-color: lightgoldenrodyellow;
+}
+.title{
+    text-align: center;
+}
+
+

@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome To Quiz App</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h1>Quiz</h1>
-    <div th:unless="${JWT_TOKEN != null}">
-        <a href="auth/login"> Login to save score </a>
+
+        <div th:unless="${JWT_TOKEN != null}" class="check">
+            <a href="auth/login"> Login to save score </a>
+        </div>
+        <div th:if="${JWT_TOKEN != null}" class="check">
+            <a href="question/view/answers"> View Your Point </a>
+        </div>
+
+    <div class="content">
+        <ul th:each="quiz : ${listQuiz}" class="tag">
+            <li>
+                <a th:href="@{'/question/' + ${quiz.title}}" th:text="${quiz.title}"> </a>
+            </li>
+        </ul>
     </div>
-    <div th:if="${JWT_TOKEN != null}">
-        <a href="question/view/answers"> View Your Point </a>
-    </div>
-    <ul th:each="quiz : ${listQuiz}">
-        <li>
-            <a th:href="@{'/question/' + ${quiz.title}}" th:text="${quiz.title}"> </a>
-        </li>
-    </ul>
+
+
 
 </body>
 </html>
