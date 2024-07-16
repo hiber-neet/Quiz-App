@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>View ALl Point</title>
-    <link rel="stylesheet" href="../static/style.css" type="text/css" />
+    <link rel="stylesheet" href="/StyleForAll.css" type="text/css" />
 </head>
 <body>
-    <h1>All Your Point</h1>
-    <div th:each="point, index : ${answerList}">
+    <h1 class="header">All Your Point</h1>
+    <div th:each="point, index : ${answerList}" class="check">
         <h3 th:text="${index.index + 1 + 'time(s): ' + point.getPoint() + 'point(s)'}"></h3>
         <h3 ></h3>
     </div>

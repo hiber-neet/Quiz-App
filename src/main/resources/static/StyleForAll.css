@@ -6,7 +6,6 @@ body{
     background: linear-gradient(to right, #25c481, #25b7c4);/* Gradient*/
     background-size: cover; /* Đảm bảo background kích thước sao cho nó bao phủ toàn bộ body */
     background-attachment: fixed; /* Giữ background ổn định khi cuộn trang */
-    overflow: hidden;
 }
 th{
     width: 30%;
@@ -17,17 +16,21 @@ a{
 .tag {
     background: #eee;
     border-radius: 3px 0 0 3px;
-    color: #999;
     display: inline-block;
-    height: 26px;
     line-height: 26px;
     padding: 0 20px 0 23px;
     position: relative;
     margin: 0 10px 10px 0;
     text-decoration: none;
     -webkit-transition: color 0.2s;
-
+    width: 30%;
     list-style: none;
+    text-align: center;
+    font-weight: bold;
+
+}
+.taga{
+    color: black;
 }
 
 .tag:hover {
@@ -54,8 +57,8 @@ table{
 .content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* Đảm bảo phần tử căn giữa theo chiều cao của trang */
     width: 100%;
 }
 .loginFrame {
@@ -85,8 +88,73 @@ table{
     margin-top: 25px;
     background-color: lightgoldenrodyellow;
 }
-.title{
+.header{
     text-align: center;
 }
+.check{
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: gainsboro;
+    color: black;
+    font-weight: bolder;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+/*---------------quiz--------------*/
+.formQuestion {
+    width: 80%;
+    height: 100%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #F5F5DC;
+}
 
+/* Định dạng cho từng câu hỏi */
+.divForm {
+    margin-bottom: 20px;
+}
+
+/* Định dạng tiêu đề câu hỏi */
+.titleh4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Định dạng radio button và label */
+.inputInForm {
+    margin-right: 10px;
+}
+
+.labelInFrom {
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Định dạng cho nút submit */
+.submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Định dạng hover cho nút submit */
+.submit:hover {
+    background-color: #0066cc;
+    color: #ffffff;
+}
 

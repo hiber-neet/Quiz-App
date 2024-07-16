@@ -3,50 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiz</title>
-    <link rel="stylesheet" href="../static/style.css"/>
+    <link href="/StyleForAll.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
 
-    <form th:action="@{/question/submitAnswer}" method="post" th:object="${questionWrapper}">
+    <form th:action="@{/question/submitAnswer}" method="post" th:object="${questionWrapper}" class="formQuestion">
 
-        <div th:each="quiz, index : ${questionWrapper.answerList}">
-            <h4 th:text="${quiz.getQuestionTitle()}"></h4>
+        <div th:each="quiz, index : ${questionWrapper.answerList}"  class="divForm">
+            <h4 th:text="${quiz.getQuestionTitle()}" class="titleh4"></h4>
             <br/>
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
-                   th:value="${quiz.getOption1()}" />
+                   th:value="${quiz.getOption1()}" class="inputInForm" />
             <input type="hidden" th:name="|answerList[${index.index}].id|"
 
-                   th:value="${quiz.getId()}" />
-            <label th:text="${quiz.getOption1()}"></label>
+                   th:value="${quiz.getId()}" class="inputInForm"/>
+            <label th:text="${quiz.getOption1()}" class="labelInFrom"></label>
 
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
-                   th:value="${quiz.getOption2()}" />
+                   th:value="${quiz.getOption2()}" class="inputInForm"/>
             <input type="hidden" th:name="|answerList[${index.index}].id|"
 
-                   th:value="${quiz.getId()}" />
-            <label th:text="${quiz.getOption2()}"></label>
+                   th:value="${quiz.getId()}" class="inputInForm"/>
+            <label th:text="${quiz.getOption2()}" class="labelInFrom"></label>
 
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
-                   th:value="${quiz.getOption3()}" />
+                   th:value="${quiz.getOption3()}" class="inputInForm"/>
             <input type="hidden" th:name="|answerList[${index.index}].id|"
 
-                   th:value="${quiz.getId()}" />
-            <label th:text="${quiz.getOption3()}"></label>
+                   th:value="${quiz.getId()}" class="inputInForm"/>
+            <label th:text="${quiz.getOption3()}" class="labelInFrom"></label>
 
             <input type="radio" th:name="|answerList[${index.index}].answerOfUser|"
 
-                   th:value="${quiz.getOption4()}" />
+                   th:value="${quiz.getOption4()}" class="inputInForm"/>
             <input type="hidden" th:name="|answerList[${index.index}].id|"
 
                    th:value="${quiz.getId()}" />
-            <label th:text="${quiz.getOption4()}"></label>
+            <label th:text="${quiz.getOption4()}" class="labelInFrom"></label>
         </div>
         <br/>
-            <input type="submit" name="submitBttn" value="Submit"/>
+            <input type="submit" name="submitBttn" value="Submit" class="submit"/>
     </form>
 
 </body>
