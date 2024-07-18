@@ -22,6 +22,8 @@ public class QuizController {
     @GetMapping("/")
     public String welcomePage(Model model, HttpServletRequest request){
         List<Quiz> listQuiz = quizService.getQuizList();
+        String a ="aaa";
+        System.out.println(a.contains(""));
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
             for (Cookie cookie : cookies) {
